@@ -1,0 +1,305 @@
+/*
+# Exercice final: Freshly Restaurant
+
+Vous devez intégrer en responsive mobile first, les pages suivantes, par ordre de priorité :
+- a minima : la page d'accueil et la page des menus
+- en option : la page de contact et la page about
+
+Le contenu sur desktop a une largeur maximum de 1400px.
+Points de rupture :
+- tablette : 780px
+- desktop : 1100px
+
+### Taille des polices
+
+Par défaut : 18px
+Titre des pages : 30px
+Sous-rubriques : 25px
+Titre des menus : 20px
+Prix des menus : 50px
+Texte sous menus : 15px
+Titres du pied de page : 18px
+Texte du pied de page, boutons de tri et bouton de validation du formulaire : 16px
+
+Interlignage général de 1.5
+
+Les pictos sont des Font Awesome.
+
+### Couleurs
+
+Marron : #4c4343
+Beige : #ebe3db
+Rouge : #950000
+
+- Les ombres sur les images ont les valeurs : 3px 3px 8px rgba(76,67,67,.5)
+
+- Les ombres sur les boutons "see more" ont les valeurs : box-shadow: 2px 2px 2px silver;
+
+************
+ PAGE MENUS
+************
+
+Le plugin de fonction de tri utilisé pour la page Menus est : mixitup (https://www.kunkalabs.com/mixitup/)
+
+Au survol des images des plats, faire un léger effet de zoom et afficher le nom du plat (cf. capture d'écran).
+
+ATTENTION : Pour le plugin Mixitup, afin que le plugin fonctionne sans bug avec l'effet de zoom ajouté sur la structure figure / figcaption, il est nécessaire d'utiliser une div qui entoure chaque figure.
+*/
+
+
+/*****************
+    HEADER
+*****************/
+
+.header > .nav-home ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.header > .nav-home ul a:nth-of-type(1) li {
+    background-color: #ebe3db;
+    color: black;
+}
+
+.header > .nav-home ul a:nth-of-type(3) li {
+    background-color: #4c4343;
+    color: #fff;
+}
+
+/*****************
+    MAIN
+*****************/
+.main{
+    max-width: 779px;
+    margin: 0 auto;
+}
+
+
+.main > section:first-of-type h1{
+    margin-top: 2em;
+}
+
+.main > section:first-of-type p{
+    text-align: center;  
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.main > section:first-of-type nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    margin-left: -2em;
+}
+
+.main > section:first-of-type nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.main > section:first-of-type nav li{
+    list-style: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: 0px solid ;
+    padding: 0.2em 1em;
+    background-color: #ebe3db;
+}
+
+.main > section:first-of-type nav li:hover{
+    background-color: #950000;
+    color: #fff;
+}
+
+
+/*****************
+    details-of-our-menus
+*****************/
+.details-of-our-menus img{
+    width: 95%;
+    box-shadow: 3px 3px 8px rgba(76,67,67,.5);
+}
+
+.details-of-our-menus {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color:#ebe3db;
+    padding: 1.5em 0.3em;
+    position: relative;
+}
+
+/*.hover-zoom1{
+    background-color: rgba(76,67,67,.9);
+    color: rgba(76,67,67,.9);
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 1;
+    padding: 8em;
+    width: 31.8%;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+/******************
+Deserts
+****************/
+
+.deserts > p{
+    text-align: center;
+    font-weight: bold;
+}
+
+.deserts-img{
+    background-color:#ebe3db;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0.5em;
+    gap: 1em;
+}
+
+.deserts-img > p img{
+    max-width: 100%;
+    box-shadow: 3px 3px 8px rgba(76,67,67,.5);
+}
+/*
+.deserts-img p:nth-of-type(3){
+    width: 200%
+}
+
+.deserts-img p:nth-of-type(3) img{
+    width: 50%
+}*/
+
+/**************************
+    Cocktails
+**************************/
+.cocktails{
+    margin-bottom: 2em;
+}
+.cocktails > h2, p{
+    text-align: center;
+}
+
+.cocktails > p{
+    font-weight: bold;
+}
+
+.cocktails-img{
+    background-color:#ebe3db;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cocktails-img > p {
+    padding: 0.5em;
+}
+
+.cocktails-img > p img{
+    max-width: 100%;
+    box-shadow: 3px 3px 8px rgba(76,67,67,.5);
+}
+
+/*.cocktails-img > p:nth-of-type(3) {
+    max-width: 200%; 
+    margin-top: 0;
+}
+
+.cocktails-img > p:nth-of-type(3) img{
+    width: 50%;
+}
+
+.cocktails-img > div:nth-of-type(2) img{
+    width: 50%;
+}*/
+
+/*******************
+    Main-footer
+******************/
+
+.main-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width:780px) and (max-width:1099px) {
+
+    .main{
+        max-width: 1099px;
+    }
+
+    .header > .nav-home ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .details-of-our-menus{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 1.5em 0.3em;
+    }
+    
+
+    .deserts-img{
+        background-color:#ebe3db;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+        
+    }
+
+    .cocktails-img{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+}
+
+@media screen and (min-width:1100px) {
+
+    .main{
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+
+    .header > .nav-home ul{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .header > .nav-home ul li{
+        padding: 0.3em 1em;
+    }
+
+    .details-of-our-menus{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .deserts-img{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cocktails-img{
+        display: flex;
+        flex-direction: row;
+    }
+    .main-footer{
+        display: flex;
+        flex-direction: row;
+    }
+
+}
